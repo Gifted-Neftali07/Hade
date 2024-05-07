@@ -23,12 +23,20 @@
     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
       <!-- Botones para filtrar por tipo -->
       
+<mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color">
+  <mat-button-toggle value="red" type="button" class="btn btn-secondary" [ngClass]="{'active': tipoFiltro === 'todos'}" (click)="filtrarTipo('todos')">Todos</mat-button-toggle>
+  <mat-button-toggle value="green" type="button" class="btn btn-secondary" [ngClass]="{'active': tipoFiltro === 'economico'}" (click)="filtrarTipo('economico')">Economico</mat-button-toggle>
+  <mat-button-toggle value="blue" type="button" class="btn btn-secondary" [ngClass]="{'active': tipoFiltro === 'intermedio'}" (click)="filtrarTipo('intermedio')">Intermedio</mat-button-toggle>
+  <mat-button-toggle value="gray" type="button" class="btn btn-secondary" [ngClass]="{'active': tipoFiltro === 'premium'}" (click)="filtrarTipo('premium')">Premium</mat-button-toggle>
+</mat-button-toggle-group>
+<!--
       <button type="button" class="btn btn-secondary" [ngClass]="{'active': tipoFiltro === 'todos'}" (click)="filtrarTipo('todos')">Todos</button>
       <button type="button" class="btn btn-secondary" [ngClass]="{'active': tipoFiltro === 'economico'}" (click)="filtrarTipo('economico')">Económico</button>
       <button type="button" class="btn btn-secondary" [ngClass]="{'active': tipoFiltro === 'intermedio'}" (click)="filtrarTipo('intermedio')">Intermedio</button>
       <button type="button" class="btn btn-secondary" [ngClass]="{'active': tipoFiltro === 'premium'}" (click)="filtrarTipo('premium')">Premium</button>
-    
+    -->
       <div class="btn-group" role="group">
+        
         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
           Filtrar
         </button>
@@ -40,6 +48,7 @@
         </ul>
       </div>
     </div>
+   
     
 </div>
 
